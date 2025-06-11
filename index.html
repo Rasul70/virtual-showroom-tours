@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Виртуальные туры</title>
- .card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 12px;
-  padding: 10px;
-  background-color: white;
-}
+  <title>Virtual Showroom Tours</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
     h1 {
       text-align: center;
     }
@@ -24,48 +22,35 @@
     }
     .card {
       background: white;
-      border-radius: 8px;
+      border-radius: 12px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      width: 300px;
+      width: 220px;
       text-align: center;
       padding: 10px;
       transition: 0.2s;
     }
     .card:hover {
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
     .card img {
       width: 100%;
-      height: auto;
-      border-radius: 6px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      border-radius: 8px;
     }
-    .card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: contain;
-  border-radius: 12px;
-  padding: 10px;
-}
+    .card p {
+      margin: 12px 0 0;
+      font-weight: bold;
+    }
+    .card a {
+      color: #0066cc;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>🏠 Virtual Showroom Tours</h1>
-  <div class="grid" id="grid"></div>
-  <script>
-    const grid = document.getElementById('grid');
-
-    const folders = ['acube', 'object1', 'danube'];
-
-    folders.forEach(name => {
-      const card = document.createElement('a');
-      card.href = `./${name}/index.html`;
-      card.className = 'card';
-      card.innerHTML = `
-        <img src="./logos/${name}.jpg" alt="${name}">
-        <p>${name}</p>
-      `;
-      grid.appendChild(card);
-    });
-  </script>
+  <h1>🏡 Virtual Showroom Tours</h1>
+  <div class="grid"></div>
+  <script src="assets_loader.js"></script>
 </body>
 </html>
