@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Виртуальные туры</title>
   <style>
-    body { font-family: sans-serif; background: #f9f9f9; padding: 20px; }
-    h1 { text-align: center; }
-    .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px; }
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
     .card {
       background: white;
       border-radius: 8px;
@@ -18,14 +29,38 @@
       padding: 10px;
       transition: 0.2s;
     }
-    .card:hover { transform: scale(1.02); }
-    .card img { width: 100%; height: auto; border-radius: 6px; }
-    .card p { margin: 10px 0 0; font-weight: bold; }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+    .card p {
+      margin: 10px 0 0;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h1>🏠 Virtual Showroom Tours</h1>
-  <div class="grid"></div>
-  <script src="assets_loader.js"></script>
+  <div class="grid" id="grid"></div>
+  <script>
+    const grid = document.getElementById('grid');
+
+    const folders = ['acube', 'object1', 'danube'];
+
+    folders.forEach(name => {
+      const card = document.createElement('a');
+      card.href = `./${name}/index.html`;
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="./logos/${name}.jpg" alt="${name}">
+        <p>${name}</p>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
