@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtual Showroom Tours</title>
   <style>
     :root {
@@ -10,10 +10,9 @@
     }
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #f0f4f8, #e9eff5);
       color: #1a1a1a;
-      min-height: 100vh;
       padding: 40px 20px;
       display: flex;
       flex-direction: column;
@@ -21,15 +20,11 @@
     }
     @media (prefers-color-scheme: dark) {
       body {
-        background: linear-gradient(to right, #1c1c1c, #2a2a2a);
-        color: #fff;
+        background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+        color: #ffffff;
       }
       .card {
         background: #333;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-      }
-      .card a {
-        color: #66b0ff;
       }
     }
     h1 {
@@ -41,34 +36,32 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      width: 100%;
       max-width: 1200px;
+      width: 100%;
     }
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
       width: 200px;
-      padding: 20px;
+      padding: 16px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
     .card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
     .card img {
       width: 100%;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1/1;
       object-fit: contain;
       border-radius: 12px;
-      margin-bottom: 12px;
     }
     .card a {
-      display: inline-block;
+      display: block;
+      margin-top: 10px;
       font-weight: bold;
-      font-size: 1.1em;
-      color: #0078d7;
+      color: #0077ff;
       text-decoration: none;
     }
     .card a:hover {
@@ -77,4 +70,34 @@
   </style>
 </head>
 <body>
-  <h1>
+  <h1>🏠 Virtual Showroom Tours</h1>
+  <div class="grid" id="logoGrid"></div>
+
+  <script>
+    const projects = [
+      { name: 'Acube', folder: 'acube', logo: 'logos/acube.jpg' },
+      { name: 'Object1', folder: 'object1', logo: 'logos/object1.jpg' },
+      { name: 'Danube', folder: 'danube', logo: 'logos/danube.jpg' }
+    ];
+
+    const grid = document.getElementById('logoGrid');
+
+    projects.forEach(({ name, folder, logo }) => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      const img = document.createElement('img');
+      img.src = logo;
+      img.alt = name;
+
+      const link = document.createElement('a');
+      link.href = `${folder}/`;
+      link.textContent = name;
+
+      card.appendChild(img);
+      card.appendChild(link);
+      grid.appendChild(card);
+    });
+  </script>
+</body>
+</html>
