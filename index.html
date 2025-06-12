@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtual Showroom Tours</title>
   <style>
     body {
+      font-family: sans-serif;
+      background: #1e1e1e;
+      color: #fff;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1e1e1e;
-      color: #ffffff;
+      padding: 20px;
       text-align: center;
     }
     h1 {
-      margin-top: 40px;
-      font-size: 2em;
+      margin-bottom: 40px;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
-      margin: 40px;
+      gap: 30px;
     }
     .card {
-      background-color: #ffffff;
+      background: #fff;
       color: #000;
+      border-radius: 16px;
       width: 240px;
       height: 240px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: transform 0.3s;
+      transition: transform 0.2s;
+      overflow: hidden;
     }
     .card:hover {
-      transform: translateY(-5px);
+      transform: scale(1.03);
     }
     .card img {
-      width: 160px;
-      height: 160px;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
+      padding: 20px;
     }
     .card a {
-      margin-top: 12px;
       text-decoration: none;
+      color: #007bff;
       font-weight: bold;
-      color: #0055ff;
+      margin-top: 8px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <h1>
+  <h1>🏡 Virtual Showroom Tours</h1>
+  <div class="grid">
+    <div class="card">
+      <a href="acube/">
+        <img src="logos/acube.jpg" alt="Acube" />
+        <div>Acube</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="object1/">
+        <img src="logos/object1.jpg" alt="Object 1" />
+        <div>Object1</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="danube/">
+        <img src="logos/danube.jpg" alt="Danube" />
+        <div>Danube</div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
