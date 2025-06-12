@@ -1,84 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Virtual Showroom Tours</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #1e1e1e;
-      color: #fff;
-      padding: 20px;
       margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
     }
     h1 {
-      text-align: center;
-      margin-bottom: 40px;
+      margin-top: 40px;
+      font-size: 2em;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
+      margin: 40px;
     }
     .card {
-      background: #fff;
-      border-radius: 16px;
-      width: 220px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+      color: #000;
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
     .card img {
-      width: 100%;
-      height: 0;
-      padding-bottom: 100%; /* 👈 Делает квадрат */
+      width: 160px;
+      height: 160px;
       object-fit: contain;
-      border-radius: 12px;
-      background: white url('./logos/placeholder.jpg') center center no-repeat;
-      background-size: contain;
     }
     .card a {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
+      margin-top: 12px;
       text-decoration: none;
-      color: #1e88e5;
-    }
-    .card a:hover {
-      text-decoration: underline;
+      font-weight: bold;
+      color: #0055ff;
     }
   </style>
 </head>
 <body>
-  <h1>🏠 Virtual Showroom Tours</h1>
-  <div class="grid" id="grid"></div>
-
-  <script>
-    const folders = ["acube", "object1", "danube"];
-    const grid = document.getElementById("grid");
-
-    folders.forEach(name => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const img = document.createElement("img");
-      img.src = `logos/${name}.jpg`;
-      img.alt = name;
-
-      const link = document.createElement("a");
-      link.href = `${name}/`;
-      link.textContent = name.charAt(0).toUpperCase() + name.slice(1);
-
-      card.appendChild(img);
-      card.appendChild(link);
-      grid.appendChild(card);
-    });
-  </script>
-</body>
-</html>
+  <h1>
