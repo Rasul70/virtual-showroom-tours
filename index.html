@@ -6,67 +6,68 @@
   <title>Virtual Showroom Tours</title>
   <style>
     body {
-      margin: 0;
       font-family: sans-serif;
-      background-color: #1e1e1e;
+      background: #1e1e1e;
       color: #fff;
+      padding: 20px;
+      margin: 0;
     }
     h1 {
       text-align: center;
-      margin-top: 40px;
+      margin-bottom: 40px;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 40px;
     }
     .card {
       background: #fff;
-      color: #000;
       border-radius: 16px;
-      width: 220px;
-      height: 220px;
+      width: 300px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s;
-      text-decoration: none;
     }
     .card:hover {
       transform: scale(1.05);
     }
     .card img {
-      width: 100px;
-      height: 100px;
+      width: 200px;
+      height: 200px;
       object-fit: contain;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
-    .card span {
-      font-size: 16px;
+    .card a {
       font-weight: bold;
-      color: #007aff;
-    }
-    .home-button {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      background: #007aff;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 14px;
+      color: #007bff;
       text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
-    .home-button:hover {
-      background-color: #0051c7;
+    .card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>
+  <h1>🏠 Virtual Showroom Tours</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="logos/acube.jpg" alt="Acube">
+      <a href="acube/">Acube</a>
+    </div>
+    <div class="card">
+      <img src="logos/object1.jpg" alt="Object1">
+      <a href="object1/">Object1</a>
+    </div>
+    <div class="card">
+      <img src="logos/danube.jpg" alt="Danube">
+      <a href="danube/">Danube</a>
+    </div>
+  </div>
+</body>
+</html>
