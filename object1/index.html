@@ -1,151 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> @-ms-viewport { width: device-width; } </style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body class="multiple-scenes view-control-buttons">
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div id="pano"></div>
+    <link rel="stylesheet" href="style.css">
 
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-img_20250602_193528_00_merged">
-        <li class="text">IMG_20250602_193528_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-img_20250602_193601_00_merged">
-        <li class="text">IMG_20250602_193601_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-img_20250602_193642_00_merged">
-        <li class="text">IMG_20250602_193642_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-img_20250602_193715_00_merged">
-        <li class="text">IMG_20250602_193715_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-img_20250602_194010_00_merged">
-        <li class="text">IMG_20250602_194010_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-img_20250602_194056_00_merged">
-        <li class="text">IMG_20250602_194056_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="6-img_20250602_194134_00_merged">
-        <li class="text">IMG_20250602_194134_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="7-img_20250602_194215_00_merged">
-        <li class="text">IMG_20250602_194215_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="8-img_20250602_194313_00_merged">
-        <li class="text">IMG_20250602_194313_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="9-img_20250602_194358_00_merged">
-        <li class="text">IMG_20250602_194358_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="10-img_20250602_194428_00_merged">
-        <li class="text">IMG_20250602_194428_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="11-img_20250602_194500_00_merged">
-        <li class="text">IMG_20250602_194500_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="12-img_20250602_194527_00_merged">
-        <li class="text">IMG_20250602_194527_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="13-img_20250602_194600_00_merged">
-        <li class="text">IMG_20250602_194600_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="14-img_20250602_201059_00_merged">
-        <li class="text">IMG_20250602_201059_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="15-img_20250602_201152_00_merged">
-        <li class="text">IMG_20250602_201152_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="16-img_20250602_201625_00_merged">
-        <li class="text">IMG_20250602_201625_00_merged</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="17-img_20250602_201903_00_merged">
-        <li class="text">IMG_20250602_201903_00_merged</li>
-      </a>
-    
-  </ul>
-</div>
+    <style>
+      a.back-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #ffffffcc;
+        color: #000;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        text-decoration: none;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
 
-<div id="titleBar">
-  <h1 class="sceneName"></h1>
-</div>
+      a.back-button:hover {
+        background: #ddddddcc;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <p>This virtual tour requires JavaScript. Please enable it in your browser.</p>
+    </noscript>
 
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
+    <div id="pano"></div>
 
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
+    <!-- Marzipano JS и конфигурация -->
+    <script src="vendor/screenfull.min.js"></script>
+    <script src="vendor/bowser.min.js"></script>
+    <script src="vendor/marzipano.js"></script>
 
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
+    <script src="data.js"></script>
+    <script src="index.js"></script>
 
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
-
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
-
-<script src="data.js"></script>
-<script src="index.js"></script>
-
-<div style="position: fixed; bottom: 20px; left: 20px; z-index: 99999;">
-  <a href="../index.html" style="
-    background: #ffffffcc;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  ">
-    ← Back to Main Page
-  </a>
-</div>
+    <!-- Кнопка возврата -->
+    <a class="back-button" href="../index.html">← Back to Main Page</a>
+  </body>
+</html>
