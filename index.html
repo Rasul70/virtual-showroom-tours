@@ -3,78 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Tours</title>
+  <title>Virtual Showroom Tours</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #1e1e1e;
-      color: #fff;
       margin: 0;
-      padding: 18px;
-      text-align: center;
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
     }
     h1 {
-      margin-bottom: 40px;
+      text-align: center;
+      margin-top: 40px;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
+      padding: 40px;
     }
     .card {
-  background: white;
-  width: 220px;
-  height: 220px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 18px;
-}
-   .card a {
-  font-size: 18px;
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
-  margin-top: 22px;
-}
+      background: #fff;
+      color: #000;
+      border-radius: 16px;
+      width: 220px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .card span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #007aff;
+    }
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #007aff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .home-button:hover {
+      background-color: #0051c7;
+    }
   </style>
 </head>
 <body>
-  <h1>🏡 Virtual Tours</h1>
-  <div class="grid">
-    <div class="card">
-      <a href="acube/">
-        <img src="logos/acube.jpg" alt="Acube" />
-        <div>Acube</div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="object1/">
-        <img src="logos/object1.jpg" alt="Object 1" />
-        <div>Object1</div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="danube/">
-        <img src="logos/danube.jpg" alt="Danube" />
-        <div>Danube</div>
-      </a>
-    </div>
-  </div>
-</body>
-</html>
+  <h1>
