@@ -3,78 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Tours</title>
+  <title>Virtual Showroom Tours</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #1e1e1e;
-      color: #fff;
       margin: 0;
-      padding: 18px;
+      font-family: sans-serif;
+      background-color: #1e1e1e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+    header {
+      padding: 2rem 1rem 1rem;
       text-align: center;
     }
     h1 {
-      margin-bottom: 40px;
+      margin: 0;
+      font-size: 2rem;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 1.5rem;
+      padding: 1rem;
+      max-width: 1000px;
     }
     .card {
-  background: white;
-  width: 220px;
-  height: 220px;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  margin-bottom: 18px;
-}
-   .card a {
-  font-size: 18px;
-  font-weight: bold;
-  color: #007bff;
-  text-decoration: none;
-  margin-top: 22px;
-}
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      width: 220px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .home-button {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      color: #ccc;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
-  <h1>🏡 Virtual Tours</h1>
+  <header>
+    <h1>Virtual Showroom Tours</h1>
+  </header>
   <div class="grid">
-    <div class="card">
-      <a href="acube/">
-        <img src="logos/acube.jpg" alt="Acube" />
-        <div>Acube</div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="object1/">
-        <img src="logos/object1.jpg" alt="Object 1" />
-        <div>Object1</div>
-      </a>
-    </div>
-    <div class="card">
-      <a href="danube/">
-        <img src="logos/danube.jpg" alt="Danube" />
-        <div>Danube</div>
-      </a>
-    </div>
+    <a href="Object1/index.html" class="card">
+      <img src="logos/object.jpg" alt="Object1" />
+      <span>Object1</span>
+    </a>
+    <a href="Acube/index.html" class="card">
+      <img src="logos/Acube-2.jpg" alt="Acube" />
+      <span>Acube</span>
+    </a>
+    <a href="Danube/index.html" class="card">
+      <img src="logos/danube.jpg" alt="Danube" />
+      <span>Danube</span>
+    </a>
   </div>
+  <a href="/virtual-showroom-tours/" class="home-button">← Back to Home</a>
 </body>
 </html>
