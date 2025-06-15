@@ -9,11 +9,11 @@
       font-family: sans-serif;
       background: #1e1e1e;
       color: #fff;
-      margin: 0;
       padding: 20px;
-      text-align: center;
+      margin: 0;
     }
     h1 {
+      text-align: center;
       margin-bottom: 40px;
     }
     .grid {
@@ -24,56 +24,49 @@
     }
     .card {
       background: #fff;
-      color: #000;
       border-radius: 16px;
-      width: 240px;
-      height: 240px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      width: 300px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: transform 0.2s;
-      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
     }
     .card img {
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      height: 200px;
       object-fit: contain;
-      padding: 20px;
+      margin-bottom: 10px;
     }
     .card a {
-      text-decoration: none;
-      color: #007bff;
       font-weight: bold;
-      margin-top: 8px;
-      display: inline-block;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>🏡 Virtual Showroom Tours</h1>
+  <h1>🏠 Virtual Showroom Tours</h1>
   <div class="grid">
     <div class="card">
-      <a href="acube/">
-        <img src="logos/acube.jpg" alt="Acube" />
-        <div>Acube</div>
-      </a>
+      <img src="logos/acube.jpg" alt="Acube">
+      <a href="acube/">Acube</a>
     </div>
     <div class="card">
-      <a href="object1/">
-        <img src="logos/object1.jpg" alt="Object 1" />
-        <div>Object1</div>
-      </a>
+      <img src="logos/object1.jpg" alt="Object1">
+      <a href="object1/">Object1</a>
     </div>
     <div class="card">
-      <a href="danube/">
-        <img src="logos/danube.jpg" alt="Danube" />
-        <div>Danube</div>
-      </a>
+      <img src="logos/danube.jpg" alt="Danube">
+      <a href="danube/">Danube</a>
     </div>
   </div>
 </body>
