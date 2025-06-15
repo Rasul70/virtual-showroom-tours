@@ -1,87 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Virtual Showroom Tours</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #1e1e1e;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-    }
-    header {
-      padding: 2rem 1rem 1rem;
-      text-align: center;
-    }
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      padding: 1rem;
-      max-width: 1000px;
-    }
-    .card {
-      background-color: #2c2c2c;
-      border-radius: 10px;
-      width: 220px;
-      height: 220px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: white;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .card img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 1rem;
-    }
-    .home-button {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      color: #ccc;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Virtual Showroom Tours</h1>
-  </header>
-  <div class="grid">
-    <a href="Object1/index.html" class="card">
-      <img src="logos/object.jpg" alt="Object1" />
-      <span>Object1</span>
-    </a>
-    <a href="Acube/index.html" class="card">
-      <img src="logos/Acube-2.jpg" alt="Acube" />
-      <span>Acube</span>
-    </a>
-    <a href="Danube/index.html" class="card">
-      <img src="logos/danube.jpg" alt="Danube" />
-      <span>Danube</span>
-    </a>
-  </div>
-  <a href="/virtual-showroom-tours/" class="home-button">← Back to Home</a>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Tour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      a.back-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background: #ffffffcc;
+        color: #000;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 14px;
+        text-decoration: none;
+        z-index: 9999;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      a.back-button:hover {
+        background: #ddddddcc;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <p>This virtual tour requires JavaScript. Please enable it in your browser.</p>
+    </noscript>
+
+    <div id="pano"></div>
+
+    <!-- Marzipano JS и конфигурация -->
+    <script src="vendor/screenfull.min.js"></script>
+    <script src="vendor/bowser.min.js"></script>
+    <script src="vendor/marzipano.js"></script>
+
+    <script src="data.js"></script>
+    <script src="index.js"></script>
+
+    <!-- Кнопка возврата -->
+    <a class="back-button" href="../index.html">← Back to Main Page</a>
+  </body>
 </html>
