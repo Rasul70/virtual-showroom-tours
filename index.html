@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtual Showroom Tours</title>
   <style>
     body {
       font-family: sans-serif;
       background: #1e1e1e;
       color: #fff;
-      padding: 20px;
       margin: 0;
+      padding: 20px;
+      text-align: center;
     }
     h1 {
-      text-align: center;
       margin-bottom: 40px;
     }
     .grid {
@@ -24,61 +24,57 @@
     }
     .card {
       background: #fff;
+      color: #000;
       border-radius: 16px;
-      width: 220px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+      width: 240px;
+      height: 240px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+      overflow: hidden;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     .card img {
       width: 100%;
-      height: 0;
-      padding-bottom: 100%; /* 👈 Делает квадрат */
+      height: 100%;
       object-fit: contain;
-      border-radius: 12px;
-      background: white url('./logos/placeholder.jpg') center center no-repeat;
-      background-size: contain;
+      padding: 20px;
     }
     .card a {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
       text-decoration: none;
-      color: #1e88e5;
-    }
-    .card a:hover {
-      text-decoration: underline;
+      color: #007bff;
+      font-weight: bold;
+      margin-top: 8px;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
-  <h1>🏠 Virtual Showroom Tours</h1>
-  <div class="grid" id="grid"></div>
-
-  <script>
-    const folders = ["acube", "object1", "danube"];
-    const grid = document.getElementById("grid");
-
-    folders.forEach(name => {
-      const card = document.createElement("div");
-      card.className = "card";
-
-      const img = document.createElement("img");
-      img.src = `logos/${name}.jpg`;
-      img.alt = name;
-
-      const link = document.createElement("a");
-      link.href = `${name}/`;
-      link.textContent = name.charAt(0).toUpperCase() + name.slice(1);
-
-      card.appendChild(img);
-      card.appendChild(link);
-      grid.appendChild(card);
-    });
-  </script>
+  <h1>🏡 Virtual Showroom Tours</h1>
+  <div class="grid">
+    <div class="card">
+      <a href="acube/">
+        <img src="logos/acube.jpg" alt="Acube" />
+        <div>Acube</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="object1/">
+        <img src="logos/object1.jpg" alt="Object 1" />
+        <div>Object1</div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="danube/">
+        <img src="logos/danube.jpg" alt="Danube" />
+        <div>Danube</div>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
