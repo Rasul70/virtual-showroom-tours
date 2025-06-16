@@ -4,89 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Virtual Showroom Tours</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
+      font-family: sans-serif;
+      background: #1e1e1e;
       color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px 10px;
+      padding: 20px;
+      margin: 0;
     }
     h1 {
-      font-size: 2em;
-      margin-bottom: 30px;
       text-align: center;
+      margin-bottom: 40px;
     }
     .grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
     }
     .card {
-      background-color: #222;
-      width: 220px;
-      height: 260px;
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: contain;
-      border-radius: 8px;
       background: #fff;
-    }
-    .card h3 {
-      margin: 10px 0 5px;
-      font-size: 16px;
-    }
-    .card p {
-      margin: 0;
-      font-size: 13px;
-      color: #aaa;
-    }
-    .loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: #000;
+      border-radius: 16px;
+      width: 300px;
+      height: 300px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-size: 20px;
-      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
     }
-    @media (max-width: 600px) {
-      .card {
-        width: 90vw;
-        height: auto;
-      }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .card a {
+      font-weight: bold;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .card a:hover {
+      text-decoration: underline;
     }
   </style>
-  <script>
-    window.addEventListener("load", () => {
-      document.querySelector(".loader").style.display = "none";
-    });
-  </script>
 </head>
 <body>
-  <div class="loader">Loading tours...</div>
-  <h1>
+  <h1>🏠 Virtual Showroom Tours</h1>
+  <div class="grid">
+    <div class="card">
+      <img src="logos/acube.jpg" alt="Acube">
+      <a href="acube/">Acube</a>
+    </div>
+    <div class="card">
+      <img src="logos/object1.jpg" alt="Object1">
+      <a href="object1/">Object1</a>
+    </div>
+    <div class="card">
+      <img src="logos/danube.jpg" alt="Danube">
+      <a href="danube/">Danube</a>
+    </div>
+  </div>
+</body>
+</html>
