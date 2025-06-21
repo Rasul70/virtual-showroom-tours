@@ -9,8 +9,8 @@
       font-family: sans-serif;
       background: #1e1e1e;
       color: #fff;
-      margin: 0;
       padding: 20px;
+      margin: 0;
     }
     h1 {
       text-align: center;
@@ -31,7 +31,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
     .card:hover {
@@ -45,32 +45,21 @@
     }
     .card a {
       font-weight: bold;
-      font-size: 16px;
       color: #007bff;
       text-decoration: none;
     }
     .card a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 768px) {
-      .card {
-        width: 90vw;
-        height: auto;
-      }
-      .card img {
-        width: 60vw;
-        height: 60vw;
-      }
-    }
   </style>
 </head>
 <body>
   <h1>🏠 Virtual Showroom Tours</h1>
-  <div class="card">
-  <a href="moonsa-tour/index.html">
-    <img src="img/acube.jpg" alt="ACUBE" />
-  </a>
-</div>
+  <div class="grid">
+    <div class="card">
+      <img src="logos/acube.jpg" alt="Acube">
+      <a href="acube/">Acube</a>
+    </div>
     <div class="card">
       <img src="logos/object1.jpg" alt="Object1">
       <a href="object1/">Object1</a>
