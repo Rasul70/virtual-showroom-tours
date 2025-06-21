@@ -37,19 +37,12 @@
     .card:hover {
       transform: scale(1.05);
     }
-    .card img {
+    .card a img {
       width: 200px;
       height: 200px;
       object-fit: contain;
       margin-bottom: 10px;
-    }
-    .card a {
-      font-weight: bold;
-      color: #007bff;
-      text-decoration: none;
-    }
-    .card a:hover {
-      text-decoration: underline;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -57,16 +50,19 @@
   <h1>🏠 Virtual Showroom Tours</h1>
   <div class="grid">
     <div class="card">
-      <img src="logos/acube.jpg" alt="Acube">
-      <a href="acube/">Acube</a>
+      <a href="acube/">
+        <img src="logos/acube.jpg" alt="Acube">
+      </a>
     </div>
     <div class="card">
-      <img src="logos/object1.jpg" alt="Object1">
-      <a href="object1/">Object1</a>
+      <a href="object1/">
+        <img src="logos/object1.jpg" alt="Object1">
+      </a>
     </div>
     <div class="card">
-      <img src="logos/danube.jpg" alt="Danube">
-      <a href="danube/">Danube</a>
+      <a href="danube/">
+        <img src="logos/danube.jpg" alt="Danube">
+      </a>
     </div>
   </div>
 </body>
