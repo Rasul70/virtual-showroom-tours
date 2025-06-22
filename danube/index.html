@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Danube Apartments</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danube — Showrooms</title>
   <style>
     body {
-      background: #1e1e1e;
-      color: white;
       font-family: sans-serif;
+      background: #1e1e1e;
+      color: #fff;
       padding: 20px;
       margin: 0;
     }
@@ -17,26 +18,69 @@
     }
     .grid {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      justify-content: center;
+      gap: 30px;
     }
     .card {
       background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      color: black;
+      border-radius: 16px;
+      width: 300px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: transform 0.3s;
+      overflow: hidden;
+      text-align: center;
     }
     .card:hover {
       transform: scale(1.05);
     }
     .card a {
       text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .card-text {
       font-weight: bold;
       color: #007bff;
+    }
+    .back {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .back a {
+      color: #ccc;
+      text-decoration: none;
+    }
+    .back a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        width: 90vw;
+        height: auto;
+      }
+      .card img {
+        width: 100%;
+        height: auto;
+      }
     }
   </style>
 </head>
@@ -44,14 +88,27 @@
   <h1>Danube — Showrooms</h1>
   <div class="grid">
     <div class="card">
-      <a href="studio/">Studio — 1-комнатная</a>
+      <a href="studio/">
+        <img src="../logos/danube.jpg" alt="Studio">
+        <div class="card-text">Studio</div>
+      </a>
     </div>
     <div class="card">
-      <a href="1bedroom/">1 Bedroom — 2-комнатная</a>
+      <a href="1bedroom/">
+        <img src="../logos/danube.jpg" alt="1 Bedroom">
+        <div class="card-text">1 Bedroom</div>
+      </a>
     </div>
     <div class="card">
-      <a href="2bedroom/">2 Bedroom — 3-комнатная</a>
+      <a href="2bedroom/">
+        <img src="../logos/danube.jpg" alt="2 Bedroom">
+        <div class="card-text">2 Bedroom</div>
+      </a>
     </div>
+  </div>
+
+  <div class="back">
+    <p><a href="../index.html">⬅ Back to main menu</a></p>
   </div>
 </body>
 </html>
