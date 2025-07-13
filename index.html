@@ -82,6 +82,64 @@
     </div>
   </a>
 </div>
- <script src="https://taplink.ws/widget/13236684" async></script>
+ <style>
+.taplink-circle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff4e4e,
+    #ff4e4e 10px,
+    #ff6666 10px,
+    #ff6666 20px
+  );
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  cursor: pointer;
+  z-index: 9999;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,78,78, 0.5); }
+  70% { box-shadow: 0 0 0 10px rgba(255,78,78, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,78,78, 0); }
+}
+#taplink-frame-container {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 360px;
+  height: 620px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  z-index: 9998;
+  overflow: hidden;
+}
+#taplink-frame-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+
+<!-- Кнопка -->
+<div class="taplink-circle" onclick="toggleTaplink()"></div>
+
+<!-- Окно Taplink -->
+<div id="taplink-frame-container">
+  <iframe src="https://yarichev.taplink.ws"></iframe>
+</div>
+
+<script>
+function toggleTaplink() {
+  const container = document.getElementById('taplink-frame-container');
+  container.style.display = container.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 </body>
 </html>
