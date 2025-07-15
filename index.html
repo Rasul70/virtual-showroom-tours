@@ -83,20 +83,40 @@
   </a>
 </div>
 
-    <div style="text-align:center; margin-top: 30px;">
-  <a href="https://yarichev.taplink.ws/" target="_blank" style="
+   <!-- КНОПКА ПО ЦЕНТРУ -->
+<div style="text-align:center; margin-top: 40px;">
+  <button onclick="openTaplinkIframe()" style="
       background-color: #FF4D4F;
       color: white;
-      padding: 14px 28px;
-      border-radius: 12px;
+      padding: 16px 32px;
+      border-radius: 50px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 20px;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: inline-block;">
-    🌐 Перейти на мой Taplink
-  </a>
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;">
+    🌐 Мои контакты (Taplink)
+  </button>
 </div>
+
+<!-- ВСПЛЫВАЮЩЕЕ ОКНО С TAPLINK -->
+<div id="taplinkIframeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:9999;">
+  <div style="position:relative; width:90%; max-width:420px; height:85%; margin:50px auto; background:white; border-radius:16px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.4);">
+    <iframe src="https://yarichev.taplink.ws/" style="width:100%; height:100%; border:none;"></iframe>
+    <button onclick="closeTaplinkIframe()" style="position:absolute; top:10px; right:10px; background:#eee; border:none; padding:6px 10px; border-radius:6px; cursor:pointer;">❌</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+  function openTaplinkIframe() {
+    document.getElementById("taplinkIframeModal").style.display = "block";
+  }
+  function closeTaplinkIframe() {
+    document.getElementById("taplinkIframeModal").style.display = "none";
+  }
+</script>
 </body>
 </html>
