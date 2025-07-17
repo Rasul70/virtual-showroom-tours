@@ -1233,6 +1233,12 @@ var APP_DATA = {
           "pitch": 0.02544544770410262,
           "rotation": 0,
           "target": "22-second-floor-corridor"
+        },
+        {
+          "yaw": -2.0256572866625913,
+          "pitch": 0.41524494017038904,
+          "rotation": 0,
+          "target": "26-balcony"
         }
       ],
       "infoHotspots": []
