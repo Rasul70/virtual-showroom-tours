@@ -1060,12 +1060,6 @@ var APP_DATA = {
           "target": "24-walk-through-wardrobe-2"
         },
         {
-          "yaw": 0.6682216822300138,
-          "pitch": -0.008015527451091131,
-          "rotation": 10.995574287564278,
-          "target": "27-master-bedroom-2-floor"
-        },
-        {
           "yaw": -2.372516132266128,
           "pitch": 0.03961308253293083,
           "rotation": 15.707963267948973,
@@ -1108,12 +1102,6 @@ var APP_DATA = {
           "pitch": -0.04779039108462513,
           "rotation": 0,
           "target": "25-bathroom"
-        },
-        {
-          "yaw": -1.7194712575035886,
-          "pitch": -0.19229413493833647,
-          "rotation": 4.71238898038469,
-          "target": "27-master-bedroom-2-floor"
         },
         {
           "yaw": -1.5816057705826037,
@@ -1190,14 +1178,7 @@ var APP_DATA = {
         "pitch": -0.008521727630011355,
         "fov": 1.5616123048243022
       },
-      "linkHotspots": [
-        {
-          "yaw": 2.5624763390475893,
-          "pitch": -0.05657592437768244,
-          "rotation": 0,
-          "target": "27-master-bedroom-2-floor"
-        }
-      ],
+      "linkHotspots": [],
       "infoHotspots": []
     },
     {
@@ -1224,21 +1205,21 @@ var APP_DATA = {
       ],
       "faceSize": 1488,
       "initialViewParameters": {
-        "yaw": 2.441013038480591,
-        "pitch": -0.029484967523684347,
-        "fov": 1.5608316724269102
+        "yaw": 2.5654441257256018,
+        "pitch": -0.02616443928517853,
+        "fov": 1.5616123048243022
       },
       "linkHotspots": [
         {
-          "yaw": -1.9993411134628438,
-          "pitch": 0.36105458515974753,
-          "rotation": 0,
-          "target": "26-balcony"
+          "yaw": 0.07838344045012136,
+          "pitch": 0.48105578473498056,
+          "rotation": 3.141592653589793,
+          "target": "0-landscaped-area"
         },
         {
-          "yaw": 1.5930765827377504,
-          "pitch": 0.019647919483382736,
-          "rotation": 4.71238898038469,
+          "yaw": 1.6168116983596272,
+          "pitch": 0.02544544770410262,
+          "rotation": 0,
           "target": "22-second-floor-corridor"
         }
       ],
